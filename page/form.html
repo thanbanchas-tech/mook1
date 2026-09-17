@@ -7,6 +7,13 @@
     <!-- font -->
       <link rel="stylesheet" href="../css/style.css">
       <link rel="stylesheet" href="../css/fontface.css">
+    
+    <!-- our project is using icons from Solid, Sharp Thin, Sharp Duotone Thin + Brands -->
+    <link href="../fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="../fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="../fontawesome/css/solid.css" rel="stylesheet" />
+    <!-- <link href="../fontawesome/css/sharp-thin.css" rel="stylesheet" />
+    <link href="../fontawesome/css/sharp-duotone-thin.css" rel="stylesheet" /> -->
 
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -26,10 +33,10 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav navText">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                    <a class="nav-link active" aria-current="page" href="../index.html">HOME</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">MANS</a>
+                    <a class="nav-link active" aria-current="page2" href="../page2/mans.html">MANS</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">WOMEN</a>
@@ -41,9 +48,13 @@
                     <a class="nav-link" href="#">PAGE</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">CONTACT</a>
+                    <a class="nav-link" href="form.html">CONTACT</a>
                   </li>
                 </ul>
+                <div class="nav-icons">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-user"></i>
+                </div>
               </div>
             </div>
           </nav>
@@ -90,15 +101,184 @@
           </div>
       </div>
     </header>
+  <!--form-->
+  <div class="container">
+    <section>
+      <div class="text-warning col-lg-12 col-md-12 col-sm-12 col-12 mt-5 text-center fw-semibold fs-4">
+        CM CAFÉ
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-12 mb-5 text-center fw-semibold fs-3">
+        ORDER YOUR DRINK
+      </div>
 
-    <!-- footerส่วนท้าย -->
-    <footer class="container-fluid px-0">
+      <form>
       <div class="row">
-          <div class="col-12 boxFootImg">
-            <img src="img/621310248_33.jpg">
+        <div class="fw-semibold fs-5">CUSTOMER</div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
+        <div>ชื่อ</div>
+          <input type="text" class="form-control mt-2" id="name" aria-describedby="emailHelp">
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
+        <div>เบอร์โทร</div>
+          <input type="text" class="form-control mt-2" id="phone" aria-describedby="emailHelp">
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
+        <div>ประเภท</div>
+          <select class="form-select mt-2" aria-label="Default select example">
+            <option selected>เลือกประเภทเครื่องดื่ม</option>
+            <option value="1">ร้อน</option>
+            <option value="2">เย็น</option>
+            <option value="3">ปั่น</option>
+          </select>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
+        <div>เมนู</div>
+          <select class="form-select mt-2" aria-label="Default select example">
+            <option selected>เลือกเมนูเครื่องดื่ม</option>
+            <option value="1">Coffee</option>
+            <option value="2">Tea</option>
+            <option value="3">Cocoa</option>
+            <option value="4">Soda</option>
+          </select>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
+        <div>ความหวาน</div>
+          <select class="form-select mt-2" aria-label="Default select example">
+            <option selected>เลือกระดับความหวาน</option>
+            <option value="1">0%</option>
+            <option value="2">25%</option>
+            <option value="3">50%</option>
+            <option value="4">75%</option>
+            <option value="5">100%</option>
+          </select>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
+        <div>น้ำแข็ง</div>
+          <select class="form-select mt-2" aria-label="Default select example">
+            <option selected>เลือกระดับน้ำแข็ง</option>
+            <option value="1">ไม่ใส่่น้ำแข็ง</option>
+            <option value="2">น้อย</option>
+            <option value="3">ปกติ</option>
+            <option value="4">มาก</option>
+          </select>
+        </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
+        <div>Topping</div>
+          <div class="form-check form-check-inline mt-2">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">Pearl</label>
+          </div>
+          <div class="form-check form-check-inline mt-2 mb-1">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">Whipped Cream</label>
+          </div>
+          <div></div>
+          <div class="form-check form-check-inline mt-2">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">Jelly</label>
+          </div>
+          <div class="form-check form-check-inline mt-2 ">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">Extra Shot</label>
           </div>
       </div>
 
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
+        <div>ขนาด</div>
+        <div class="form-check mt-2">
+          <input class="form-check-input" type="radio" name="drinkSize" id="sizeSmall" value="small" checked>
+          <label class="form-check-label" for="sizeSmall">
+            Small
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="drinkSize" id="sizeMedium" value="medium">
+          <label class="form-check-label" for="sizeMedium">
+            Medium
+          </label>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="radio" name="drinkSize" id="sizeLarge" value="large">
+          <label class="form-check-label" for="sizeLarge">
+            Large
+          </label>
+        </div>
+      </div>
+
+      <div class="fw-semibold fs-5">PICKUP</div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
+        <div>จำนวน</div>
+        <div class="d-flex align-items-center gap-2 mt-1">
+          <div class="input-group" style="max-width: 140px;">
+            <button class="btn btn-outline-secondary" type="button" 
+                    onclick="this.nextElementSibling.stepDown()">-</button>
+            <input type="number" class="form-control text-center" value="1" min="1" max="5" 
+                  style="-moz-appearance: textfield; appearance: textfield;" readonly>
+            <button class="btn btn-outline-secondary" type="button" 
+                    onclick="this.previousElementSibling.stepUp()">+</button>
+          </div>
+          <small class="text-muted">( เพิ่มได้สูงสุด 5 แก้ว )</small>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
+        <div>เวลารับ</div>
+        <select class="form-select mt-2" aria-label="Default select example">
+            <option selected>เลือกช่วงเวลา</option>
+            <option value="1">8:00-9:00</option>
+            <option value="2">10:00-11:00</option>
+            <option value="3">12:00-13:00</option>
+          </select>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
+        <div>วิธีชำระเงิน</div>
+        <div class="form-check mt-2">
+            <input class="form-check-input" type="radio" name="paymentMethod" id="payCash" value="cash" checked>
+            <label class="form-check-label" for="payCash">
+              Cash
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="paymentMethod" id="payQR" value="qr">
+            <label class="form-check-label" for="payQR">
+              QR Payment
+            </label>
+          </div>
+        </div>
+
+      <div class="row col-12 mt-2 mb-1">
+        <div class="input-group">
+          <span class="input-group-text" id="visible-addon">หมายเหตุ</span>
+          <input type="text" class="form-control" placeholder="รายละเอียดเพิ่มเติม (ไม่จำเป็นต้องกรอก)" aria-label="Username" aria-describedby="visible-addon">
+          <input type="text" class="form-control d-none" placeholder="Hidden input" aria-label="Hidden input" aria-describedby="visible-addon">
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-2">
+        <div></div>
+        <div class="form-check mb-2">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">ไม่ต้องการรับช้อน / หลอด</label>
+        </div>
+      </div>
+      <div class="text-center col-12">
+          <button type="submit" class="btn-add-cart w-50 py-3 fw-semibold fs-6 mb-3 mt-3">ORDER NOW</button>
+      </div>
+      </div>
+      </form>
+    </section>
+  </div>
+
+    <!-- footerส่วนท้าย -->
+    <footer class="container-fluid px-0">
       <div class="row boxFootMenu">
         <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
           <div>INFORMATION</div>
